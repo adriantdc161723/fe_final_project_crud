@@ -1,0 +1,145 @@
+.Sidebar{
+    position: fixed;
+    width: 300px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    /* border: 1px dashed black; */
+    z-index: 999;
+    background-color: white;
+}
+
+.SidebarLogo{
+    width: 100%;
+    height: 72px;
+    /* border: 1px dashed red; */
+    padding: .5em;
+    text-align: center;
+    /* background-color: black; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-image: url('/a-shop-logo-black.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-position: center center;
+}
+
+.SidebarLogo img{
+    height: 100%;
+    display: inline-block;
+}
+
+
+.SidebarMenu{
+    padding: 0;
+    margin: 0;
+    /* border: 1px dashed green; */
+    list-style: none;
+}
+
+.SidebarMenuItem{
+    /* border: 1px dashed red; */
+}
+
+.SidebarMenuItemLink{
+    display: block;
+    padding-block: .5em;
+    /* border: 1px dashed red; */
+    font-size: 1.1em;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.SidebarMenuItemLinkIcon{
+    display: inline-block;
+    /* border: 1px dashed red; */
+    width: 56px;
+}
+
+.SidebarMenuItemLinkText{
+
+}
+
+.SidebarMenuItemLink:hover, .--SidebarMenuItemLinkActive{
+    color: #ffa500;
+}
+
+.--SidebarMenuItemLinkActive::before{
+    content: " ";
+    display: block;
+    width: 5px;
+    height: 80%;
+    background-color: #ffa500;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-bottom-right-radius: 1em;
+    border-top-right-radius: 1em;
+}
+
+/* Large to Small */
+@media screen and (max-width: 992px) {
+    .Sidebar{
+        width: 56px;
+    }
+
+    .SidebarMenuItemLinkText{
+        display: none;
+    }
+
+    .SidebarLogo{
+        height: 56px;
+        background-image: url('/a-shop-logo-circle.png');
+    }
+
+    .--SidebarExpand{
+        width: 300px;
+    }
+
+    .--SidebarExpand::after{
+        content: '';
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.1);
+        left: 300px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .--SidebarExpand .SidebarLogo{
+        /* height: 72px; */
+        background-image: url('/a-shop-logo-black.png');
+        background-size: 50%;
+    }
+
+    .--SidebarExpand .SidebarMenuItemLinkText{
+        display: inline-block;
+    }
+}
+
+/* Small Devices */
+@media screen and (max-width: 576px) {
+    .Sidebar{
+        width: 0px;
+        overflow-x: hidden;
+    }
+
+    .SidebarLogo{
+        height: 56px;
+        background-image: url('/a-shop-logo-circle.png');
+    }
+
+    .--SidebarExpand{
+        width: 300px;
+    }
+
+    .--SidebarExpand .SidebarLogo{
+        /* height: 72px; */
+        background-image: url('/a-shop-logo-black.png');
+    }
+
+    .--SidebarExpand .SidebarMenuItemLinkText{
+        display: inline-block;
+    }
+}

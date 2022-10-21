@@ -1,0 +1,48 @@
+.Ainput{
+    position: relative;
+    height: 40px;
+    /* background-color: red; */
+    padding: 1em 1em 0px 1em;
+    background-color: white;
+    /* border-radius: .5em; */
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: .5em;
+    box-sizing: content-box;
+}
+
+.AinputInputField{
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1em;
+    /* border: 1px dashed red; */
+    border: none;
+    font-weight: 500;
+}
+
+
+.AinputInputField:focus{
+    outline: none;
+}
+
+.AinputLabel{
+    position: absolute;
+    font-size: 1.1em;
+    left: 19px;
+    top: 14px;
+    color: rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.Ainput:focus-within{
+    box-shadow: #ffa500 0px 1px 4px, #ffa500 0px 0px 0px 2px;
+}
+
+.Ainput:focus-within .AinputLabel, .--AinputFocused .AinputLabel{
+    font-size: .9em;
+    top: 3px;
+    font-weight: 600;
+    color: #ffa500;
+}

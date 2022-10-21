@@ -1,0 +1,38 @@
+.login-page-wrapper{
+    /* border: 1px dashed red; */
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e2aa31;
+    background-image: url('/sign-background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: start;
+    background-position-y: bottom;
+}
+
+.form-container{
+    height: 100%;
+    background-color: rgba(255,255, 255, .9);
+    width: 350px;
+    padding: 1em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
+    width: 100%;   
+}
+
+@media screen and (max-width: 576px) {
+    .form-container{
+        width: 100%;
+    }
+
+    .login-page-wrapper{
+        background-size: cover;
+        background-position-x: 50%;
+    }
+}

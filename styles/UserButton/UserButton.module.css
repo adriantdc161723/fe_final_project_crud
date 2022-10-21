@@ -1,0 +1,100 @@
+.UserButton{
+    position: relative;
+    height: 100%;
+    float: right;
+    /* border: 1px dashed red; */
+    cursor: pointer;
+    display: inline-flex;
+    color: white;
+}
+
+.UserButtonDpBox{
+    height: 100%;
+    padding: .5em;
+    /* border: 1px dashed white; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.UserButtonDp{
+    height: 36px;
+    width: 36px;
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.UserButtonDp img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.UserButtonLabel{
+    display: inline-flex;
+    height: 100%;
+    padding: .5em;
+    color: inherit;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.UserButtonSubMenuBox{
+    position: absolute;
+    top: 95%;
+    right: .5em;
+    min-width: 250px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: .5em;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    color: black;
+    display: none;
+}
+
+
+.UserButtonSubMenu{
+    /* border: 1px dashed red; */
+}
+
+.UserButtonSubMenuItem{
+    /* border: 1px dashed green; */
+}
+
+.UserButtonSubMenuItemLink{
+    display: block;
+    padding: 1em;
+}
+
+.UserButtonSubMenuItemLink:hover{
+    background-color: #ffa500;
+    color: white;
+}
+
+.UserButtonSubMenuItemLinkIcon{
+    display: inline-block;
+    width: 36px ;
+}
+
+.UserButtonSubMenuItemLinkText{
+
+}
+
+.UserButton:hover, .--UserButtonExpand{
+    background-color: rgba(255,255,255,0.1);
+}
+
+.UserButton:hover  .UserButtonSubMenuBox{
+    display: block;
+}
+
+.--UserButtonExpand .UserButtonSubMenuBox{
+    display: block;
+}

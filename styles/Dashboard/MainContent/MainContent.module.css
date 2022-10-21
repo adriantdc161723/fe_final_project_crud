@@ -1,0 +1,44 @@
+.MainContent{
+    position: fixed;
+    /* border: 1px dashed red; */
+    top: 72px;
+    right: 0;
+    bottom: 0;
+    left: 300px;
+    padding: 1em;
+    overflow-y: scroll;
+}
+
+
+/* width */
+.MainContent::-webkit-scrollbar {
+    width: .5em;
+  }
+  
+  /* Track */
+  .MainContent::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  .MainContent::-webkit-scrollbar-thumb {
+    background: #ffb222;
+  }
+  
+  /* Handle on hover */
+.MainContent::-webkit-scrollbar-thumb:hover {
+    background: #ffa500;
+  }
+
+@media screen and (max-width: 992px) {
+    .MainContent{
+        top: 56px;
+        left: 56px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .MainContent{
+        left: 0;
+    }
+}
